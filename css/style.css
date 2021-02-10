@@ -1,0 +1,428 @@
+/* Инструкции ======================================================*/
+
+/*
+Шрифт из плагина в VS Code
+Жмем F1 (cmd shift p)
+Пишем Google Fonts
+Выбираем import
+Пишем имя шрифта
+Убираем лишнее
+Добавляем кавычки "" и запись:
+&display=swap  - сообщит браузеру сначала использовать fallback, то есть системный шрифт (sans-serif например), а затем заменить его на реальный шрифт после его загрузки. Так можно избежать задержки в загрузке контента, когда шрифт ещё не прогрузился и улучшить производительность.
+&subset=cyrillic-ext - для кирилицы
+&display=swap&subset=cyrillic-ext - для двух параметоров одновременно
+
+*/
+/* Подключаем шрифты ======================================================*/
+
+/* google */
+/* @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap"); */
+/* plugin google*/
+@import url("https://fonts.googleapis.com/css?family=Lobster:regular&display=swap&subset=cyrillic-ext");
+
+
+/* local */
+@font-face {
+   font-weight: normal;
+   font-family: "Proxima Nova Rg";
+   font-style: normal;
+
+   font-display: swap;
+   src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"),
+   url("../fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+   font-weight: bold;
+   font-family: "Proxima Nova Rg";
+   font-style: italic;
+
+   font-display: swap;
+   src: url("../fonts/ProximaNova-BoldIt.woff2") format("woff2"),
+   url("../fonts/ProximaNova-BoldIt.woff") format("woff");
+}
+
+@font-face {
+   font-weight: normal;
+   font-family: "Proxima Nova Rg";
+   font-style: italic;
+
+   font-display: swap;
+   src: url("../fonts/ProximaNova-RegularIt.woff2") format("woff2"),
+   url("../fonts/ProximaNova-RegularIt.woff") format("woff");
+}
+
+@font-face {
+   font-weight: bold;
+   font-family: "Proxima Nova Rg";
+   font-style: normal;
+
+   font-display: swap;
+   src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+   url("../fonts/ProximaNova-Bold.woff") format("woff");
+}
+
+
+/* Стили обнуления ========================================================*/
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+
+   border: 0;
+}
+
+li {
+   list-style: none;
+}
+
+a,
+a:visited {
+   color: inherit;
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+
+img {
+   max-width: 100%;
+
+   vertical-align: top; /* убирает фантомные отступы у картинки*/
+}
+
+body {
+   line-height: 1;
+   font-family: "Proxima Nova Rg", cursive;
+   color: #0a0a0a;
+
+   background-image: url("../img/pattern.jpg");
+
+   /* background-color: rgb(145, 145, 145); */
+   /* font-size: 16px; можно не указывать, 16px значение по умолчанию */
+}
+
+/* Основные стили ================================================================*/
+.container {
+   max-width: 1220px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+/* <header> ======================================================================*/
+.header {
+}
+.header__block {
+   margin: 50px 0 100px 0;
+
+   font-size: 0;
+   text-align: center;
+
+   /* border: 1px solid black; */
+}
+.header__top {
+   margin: 0 0 45px 0;
+}
+.header__title {
+   display: inline-block;
+   margin: 0 50px 0 0;
+
+   vertical-align: middle;
+
+   border: 2px solid rgb(255, 230, 0);
+   /* outline: 1px solid rgb(26, 26, 194); */
+   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3);
+}
+.header__title h1 {
+   padding: 10px;
+
+   font-size: 40px;
+   line-height: 48px;
+   text-transform: uppercase;
+   letter-spacing: 0.02em;
+   word-spacing: -10px;
+   white-space: nowrap;
+   /* text-decoration: underline double #fece0c; */
+   text-shadow: 1px 1px 0 #fece0c,-1px -1px 0 #fece0c,-1px 1px 0 #fece0c,1px -1px 0 #fece0c,
+   0 -1px 0 #fece0c,0 1px 0 #fece0c,1px 0 0 #fece0c,-1px 0 0 #fece0c,0 0 8px #000000;
+
+   outline: 1px solid rgb(70, 70, 153);
+}
+.header__nav {
+   /* display: inline-block; */
+   /* margin: 10px 23px 10px 0; */
+
+
+
+   /* border: 1px solid rgb(0, 255, 98); */
+}
+.header__nav nav {
+}
+.header__nav ul {
+   margin: 0 -15px;
+}
+.header__nav li {
+   display: inline-block;
+   margin: 0 0 5px 0;
+   padding: 0 15px;
+
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 24px;
+   vertical-align: middle;
+   text-transform: uppercase;
+   text-decoration: underline overline 1px ;
+
+
+   /* border-radius: 50%; */
+   /* border: 1px solid rgb(0, 89, 255); */
+}
+.header__nav a {
+   display: inline-block;
+
+   letter-spacing: 0.13em;
+   text-shadow: 1px 1px 0 #fece0c,-1px -1px 0 #fece0c,-1px 1px 0 #fece0c,1px -1px 0 #fece0c,
+   0 -1px 0 #fece0c,0 1px 0 #fece0c,1px 0 0 #fece0c,-1px 0 0 #fece0c,0 0 8px #000000;
+
+   border: 2px solid rgb(255, 230, 0);
+   /* outline: 1px solid rgb(70, 70, 153); */
+   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.4);
+}
+.header__nav span {
+   display: inline-block;
+   padding: 5px 14px;
+
+   outline: 1px solid rgb(70, 70, 153);
+   box-shadow: 0 4px 10px 2px rgb(255, 230, 0);
+}
+.header__logo {
+   display: inline-block;
+   max-width: 230px;
+
+   vertical-align: middle;
+   /* border: 1px solid rgb(0, 0, 0); */
+
+   box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.3);
+}
+.header__logo img {
+}
+/* </header> ======================================================================*/
+/* <main>==========================================================================*/
+.main__background {
+}
+.background {
+}
+.background__block {
+   font-size: 20px;
+   line-height: 35px;
+   font-family: "Lobster";
+   text-align: justify;
+   letter-spacing: 0.15em;
+   word-spacing: 0.1em;
+}
+.background__text {
+}
+.background__text--without {
+   margin: 0 0 100px 0;
+   padding: 25px;
+
+   text-shadow: 0 0 50px #000000, 0 0 10px #fece0c;
+
+   background-color: #ffffff65;
+   border-top: 3px solid rgba(0, 0, 0, 0.377);
+   border-right: 3px solid rgba(0, 0, 0, 0.178);
+   border-left: 3px solid rgba(0, 0, 0, 0.178);
+   outline: 1px solid rgba(56, 56, 165, 0.349);
+   box-shadow: inset 0 15px 10px 2px rgba(10, 10, 10, 0.842), inset -3px 0 10px 0 rgba(10, 10, 10, 0.842),inset 3px 0 10px 0 rgba(10, 10, 10, 0.842) ;
+}
+.background__text--without img {
+   float: right;
+   max-width: 500px;
+   margin: 0 0 0 20px;
+}
+.background__item {
+   text-align: center;
+}
+.background__item p {
+   text-align: justify;
+}
+.background__item-1,
+.background__item-2,
+.background__item-3,
+.background__item-4,
+.background__item-5,
+.background__item-6,
+.background__item-7,
+.background__item-8 {
+   display: inline-block;
+   width: 300px;
+   height: 300px;
+   margin: 50px;
+   padding: 15px 0 15px 15px;
+   overflow: auto;
+
+   font-size: 24px;
+   font-family: "Proxima Nova Rg";
+   text-align: left;
+   color: black;
+
+   background: #fece0c url("../img/1.jpg") 0 0 / 240px 240px no-repeat;
+   border: 30px dotted black;
+}
+.background__item-1 div,
+.background__item-2 div,
+.background__item-3 div,
+.background__item-4 div,
+.background__item-5 div,
+.background__item-6 div,
+.background__item-7 div,
+.background__item-8 div {
+   height: 100%;
+   padding: 5px;
+
+   color: #fece0c;
+   text-shadow: 1px 1px 0 #020202,-1px -1px 0 #020202,-1px 1px 0 #020202,1px -1px 0 #020202,
+   0 -1px 0 #020202,0 1px 0 #020202,1px 0 0 #020202,-1px 0 0 #020202,0 0 8px #000000;
+
+   background-color: #7a7a7a70;
+   border: 3px solid black;
+}
+.background__item-1 p,
+.background__item-2 p,
+.background__item-3 p,
+.background__item-4 p,
+.background__item-5 p,
+.background__item-6 p,
+.background__item-7 p,
+.background__item-8 p {
+   margin: 240px 0 -15px -15px;
+   padding: 5px 8px;
+
+   text-align: left;
+
+   background-image: url("../img/pattern.jpg");
+}
+.background__item-1 span,
+.background__item-2 span,
+.background__item-3 span,
+.background__item-4 span,
+.background__item-5 span,
+.background__item-6 span,
+.background__item-7 span,
+.background__item-8 span,
+.span {
+   color: #fece0c;
+   text-shadow: 1px 1px 0 #020202,-1px -1px 0 #020202,-1px 1px 0 #020202,1px -1px 0 #020202,
+   0 -1px 0 #020202,0 1px 0 #020202,1px 0 0 #020202,-1px 0 0 #020202,0 0 8px #000000;
+}
+
+.background__item-1 {
+   background-clip: border-box;
+   background-origin: padding-box;
+}
+.background__item-2 {
+   background-clip: border-box;
+   background-origin: border-box;
+}
+.background__item-3 {
+   background-clip: border-box;
+   background-origin: content-box;
+}
+.background__item-4 {
+   background-clip: padding-box;
+   background-origin: padding-box;
+}
+.background__item-5 {
+   background-clip: padding-box;
+   background-origin: content-box;
+}
+.background__item-6 {
+   /* background: #fece0c; */
+   background-clip: content-box;
+   background-origin: padding-box;
+}
+.background__item-7 {
+   background: #fece0c url("../img/bg.jpg") 15px 0 / 100% no-repeat;
+   -webkit-background-clip: text;
+   background-origin: padding-box;
+}
+.background__item-8 {
+   background-clip: border-box;
+   background-origin: padding-box;
+}
+.background__item-8 div {
+   visibility: hidden;
+}
+.background__item-8 p {
+   height: 240px;
+}
+.background__item-8 span {
+   opacity: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+.background__text--origin {
+   margin: 0 0 100px 0;
+   padding: 25px;
+
+   text-shadow: 0 0 50px #000000, 0 0 10px #fece0c;
+   /* background-color: #ff0000; */
+
+   background-image:    -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(221,241,249,0.09) 9%, rgba(91,91,91,1) 100%); /* FF3.6-15 */
+   background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(221,241,249,0.09) 9%,rgba(91,91,91,1) 100%); /* Chrome10-25,Safari5.1-6 */
+   background-image:         linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(221,241,249,0.09) 9%,rgba(91,91,91,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   background-clip: text;
+   /* background-origin: content-box; */
+   border-top: 3px solid rgba(0, 0, 0, 0.377);
+   border-right: 3px solid rgba(0, 0, 0, 0.178);
+   border-left: 3px solid rgba(0, 0, 0, 0.178);
+   outline: 1px solid rgba(56, 56, 165, 0.349);
+   box-shadow: inset 0 15px 10px 2px rgba(10, 10, 10, 0.842), inset -3px 0 10px 0 rgba(10, 10, 10, 0.842),inset 3px 0 10px 0 rgba(10, 10, 10, 0.842) ;
+}
+.background__text--origin img {
+   float: left;
+   max-width: 500px;
+   margin: 0 20px 0 0;
+}
+.background__text--clip {
+   margin: 0 0 100px 0;
+   padding: 25px;
+
+   text-shadow: 0 0 50px #000000, 0 0 10px #fece0c;
+
+   background-color: #ffffff65;
+   background-origin: content-box;
+   border-top: 3px solid rgba(0, 0, 0, 0.377);
+   border-right: 3px solid rgba(0, 0, 0, 0.178);
+   border-left: 3px solid rgba(0, 0, 0, 0.178);
+   outline: 1px solid rgba(56, 56, 165, 0.349);
+   box-shadow: inset 0 15px 10px 2px rgba(10, 10, 10, 0.842), inset -3px 0 10px 0 rgba(10, 10, 10, 0.842),inset 3px 0 10px 0 rgba(10, 10, 10, 0.842) ;
+}
+.background__text--clip img {
+   float: right;
+   max-width: 350px;
+   margin: 0 0 0 20px;
+}
+
+
+/* </main>=======================================================================*/
+/* <footer>======================================================================*/
+
+
+
+/* </footer>======================================================================*/

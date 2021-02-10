@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 7</title>
+</head>
+
+<body>
+	<header class="header" id="header">
+		<div class="container">
+			<div class="header__block">
+				<div class="header__top">
+					<div class="header__title">
+						<a href="#">
+							<h1>Title about site</h1>
+						</a>
+					</div>
+
+					<div class="header__logo">
+						<a href="#"><img src="img/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="header__nav">
+					<nav>
+						<ul>
+							<li><a href="#"><span>menu_item</span></a></li>
+							<li><a href="#"><span>menu_item</span></a></li>
+							<li><a href="#"><span>menu_item</span></a></li>
+							<li><a href="#"><span>menu_item</span></a></li>
+							<li><a href="#"><span>menu_item</span></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+	<main class="main">
+		<div class="container">
+			<div class="main__background background">
+				<div class="background__block">
+					<div class="background__text background__text--without">
+						<div class="background__item">
+							<img src="img/1.jpg" alt="">
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima dolore explicabo sunt
+								blanditiis
+								atque nihil, dolor consectetur ipsam. Neque doloremque, non modi corrupti facilis alias ad
+								provident mollitia, aliquid dolores animi delectus quibusdam quod laborum tenetur corporis
+								nostrum
+								quis accusantium saepe atque dignissimos amet! Consequatur debitis in quaerat quibusdam
+								repellat?
+							</p>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="background__text background__text--origin">
+						<div class="background__item">
+							<img src="img/1.jpg" alt="">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sunt, voluptates eveniet
+								facere
+								corporis, ab mollitia obcaecati ex eum nesciunt minus molestiae? At reiciendis cupiditate,
+								perferendis nihil placeat rerum, voluptatibus necessitatibus facere optio quis omnis! Neque
+								molestias sit delectus voluptatibus, quas tenetur voluptas. Perferendis voluptate ab earum,
+								consequatur velit assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+								numquam suscipit? Commodi enim ipsam molestias, animi culpa repellendus? Eligendi iusto id
+								voluptatem soluta voluptatum earum illum perferendis beatae illo reprehenderit! Magnam quis
+								beatae eveniet sed animi possimus veniam facilis dolores, molestiae eius nemo architecto, quod a
+								nihil! Aliquam, quia vitae?
+							</p>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="background__text background__text--clip">
+						<div class="background__item">
+							<img src="img/1.jpg" alt="">
+							<p>
+								CSS свойство <span class="span">background-origin</span> устанавливает область расположения
+								фона. Другими словами, оно
+								устанавливает исходную позицию изображения, установленную с помощью свойства background-image.
+
+								<br>
+								<br>
+								<span class="span">padding-box</span> (значение по умолчанию) — фоновое изображение
+								располагается в верхнем
+								левом углу
+								элемента, который является областью отступов padding.
+								<br>
+								<span class="span">border-box</span> — фоновое изображение располагается в верхнем левом углу
+								элемента,
+								который является
+								областью рамки (при этом рамка накладывается на фон, перекрывая его часть).
+								<br>
+								<span class="span">content-box</span> — фоновое изображение располагается в верхнем левом углу,
+								который
+								принадлежит
+								содержимому элемента.
+
+								<br>
+								<br>
+								<br>
+
+								Свойство CSS <span class="span">background-clip</span> определяет как цвет фона или фоновое
+								изображение будут выводиться
+								под границами блока.
+								<br>
+								<br>
+								<span class="span">padding-box</span> — фон заполняет элемент, включая его отступы, и не
+								заполняет область границ, так что в просветах пунктирной или точечной рамки фон не будет виден.
+								<br>
+								<span class="span">border-box</span> (значение по умолчанию) — фон заполняет элемент, включая
+								область рамки (при этом рамка накладывается поверх фона). В случае с фоновым рисунком эффект
+								данного значения будет заметен только при условии, что он повторяется. <br>
+								<span class="span">content-box</span> — фон заполняет элемент, включая его содержимое, и не
+								заполняет область отступов и границ. <br>
+								<span class="span">text </span> — (не все браузеры поддерживают) нужно писать с префиксом
+								-webkit-background-clip: text;
+								фон закрашивается внутри (обрезается) текста переднего плана. <br>
+
+							</p>
+							<div class="background__item-1">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Значения по умолчанию:
+									<span>background-origin:</span> padding-box;<br>
+									<span>background-clip:</span> border-box;
+								</p>
+							</div>
+							<div class="background__item-2">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Изменили занчение:
+									<span>background-origin:</span> border-box; <br>
+									Оставили по умолчанию:
+									<span>background-clip:</span> border-box;
+								</p>
+							</div>
+							<div class="background__item-3">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Изменили занчение:
+									<span>background-origin:</span> content-box <br>
+									Оставили по умолчанию:
+									<span>background-clip:</span> border-box;
+								</p>
+							</div>
+							<div class="background__item-4">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Изменили занчение:
+									<span>background-clip:</span> padding-box;
+									Оставили по умолчанию:
+									<span>background-origin:</span> padding-box <br>
+								</p>
+							</div>
+							<div class="background__item-5">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+
+									Чтобы было лучше видно изменили оба значения <br>
+
+									<span>background-clip:</span> padding-box;
+									<br>
+									<span>background-origin:</span> content-box <br>
+								</p>
+							</div>
+							<div class="background__item-6">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Изменили занчение: <br>
+									<span>background-clip:</span> content-box; <br>
+									Оставили по умолчанию: <br>
+									<span>background-origin:</span> padding-box <br>
+								</p>
+							</div>
+							<div class="background__item-7">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Изменили занчение: <br>
+									<span>-webkit-background-clip:</span> text<br>
+									Оставили по умолчанию: <br>
+									<span>background-origin:</span> padding-box <br>
+								</p>
+							</div>
+							<div class="background__item-8">
+								<div>padding у блока: 15px; <br>
+									border у блока 30px;
+								</div>
+								<p>
+									Текста не видно, а он
+									<span>есть</span> <br>
+									<span></span>
+								</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</main>
+
+
+
+
+	<footer class="footer">
+
+	</footer>
+</body>
+
+</html>
